@@ -1,0 +1,151 @@
+/* RESET */
+* {
+  font-family: 'Open Sans';
+  margin: 0;
+  padding: 0;
+}
+textarea {display: block;}
+/* LAYOUT */
+.flex {
+  display: flex;
+}
+.centered {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* FORMS */
+input[type='text'] {
+  border: none;
+  border-radius: 0;
+  font-size: 15px;
+  outline: none;
+  padding: 13px;
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+/* TEXT */
+.title {
+  color: #333;
+  margin-bottom: 20px;
+}
+.slogan {
+  font-size: 35px;
+  text-align: center;
+  margin: 40px;
+}
+.explain {
+  display: block;
+  font-style: italic;
+  margin: 20px;
+}
+.mission.banner p {
+  font-size: 35px;
+  display: block;
+  font-style: italic;
+  margin-top: 100px;
+  text-align: center;
+}
+.product.banner {
+  background-image: url('../img/product.png');
+  background-size: cover;
+  background-position: 50%;
+  height: 600px;
+}
+/* NAVIGATION */
+.navigation {
+  background: white;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  position: fixed;
+  top: 15%;
+  left: 50px;
+}
+.navigation li {
+  cursor: pointer;
+  list-style: none;
+  padding: 15px;
+}
+.navigation li:hover {
+  background: rgb(137, 165, 137);
+  color: white;
+}
+.navigation li:not(:last-child) {
+  border-bottom: 1px solid whiteSmoke;
+}
+
+/* BANNERS */
+.banner {
+  color: white;
+  min-height: 300px;
+  padding: 15px 225px 15px 225px;
+}
+
+.main.banner {
+  background: #83B8B6;
+  padding-top: 65px;
+}
+.button {
+  color: white;
+  padding: 13px;
+  background: black;
+  text-decoration: none;
+}
+.main.banner .signup.button {
+  position: relative;
+  right: 3px;
+}
+.main.banner img {
+  display: block;
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+}
+.mission.banner {
+  background: rgb(99, 136, 108);
+}
+.popout {
+  margin-top: 135px;
+  padding: 50px;
+  width: 300px;
+}
+.right.popout {
+  float: right;
+}
+.white.popout {
+  background: rgba(255,255,255,0.8);
+  border: 2px solid white;
+  color: #333;
+}
+.contact.banner {
+  background: whiteSmoke;
+  padding-bottom: 50px;
+}
+
+.form {
+  background: white;
+  color: #333;
+  width: 600px;
+  margin: 15px auto;
+  padding: 30px;
+  box-shadow: 0px 0px 2px rgba(0,0,0, 0.2);
+}
+.form:after {
+  content: ' ';
+  clear: both;
+  display: table;
+}
+.form input, .form textarea {
+  width: 100%;
+  border: 1px solid whiteSmoke;
+  margin-bottom: 30px;
+}
+.form textarea {
+  height: 170px;
+  outline: none;
+  padding: 10px;
+}
+.form .button {
+  margin-top: 10px;
+  float: right;
+}

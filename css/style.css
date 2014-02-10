@@ -85,7 +85,11 @@ input[type='text'] {
   background: #83B8B6;
   padding-top: 65px;
 }
+.contact-btn-container{
+  width:100%;
+}
 .button {
+  margin:10px auto;
   color: white;
   padding: 13px;
   background: black;

@@ -17,8 +17,9 @@
       <img src="img/icon.png" />
       <h2 class='slogan'> Set Yourself Free </h2>
       <p class='centered'>
-        <input type='text' placeholder='Enter your email address' />
-        <a href='#' class='signup button'>SIGN UP</a>
+        <input id="visitorEmail" type='text' placeholder='Enter your email address' />
+        <a href="mailto:c4on33t3a4ct@d4ey44r3d.com?Subject=DeYrd%20Kickstarter%20Notification&body=Keep%20me%20posted%20on%20deYrd's%20kickstarter%20campaign.%20Email%20me%20here:%20" target="_top" id="signupBtn" class="signup button">Sign Up</a>
+        <!-- <a href='#' class='signup button'>SIGN UP</a> -->
 
         <span class='explain'>Sign up to be notified when the deYrd kickstarter campaign begins!</span>
         <span class='explain'>(Early birds will get some awesome deals)</span>
@@ -36,13 +37,10 @@
     </section>
     <section class='contact banner' id='contact'>
       <h2 class='centered title'>Get In Touch</h2>
-      <form class='form'>
-        <label for='email'>Email Address</label>
-        <input type='text' id='email' name='email'/>
-        <label for='message'>Message</label>
-        <textarea name='message'></textarea>
-        <a href='#' class='contact button'>Contact Us</a>
-      </form>
+      <br>
+      <div class="contact-btn-container centered">
+        <a href="mailto:c4on33t3a4ct@d4ey44r3d.com?Subject=DeYrd%20Website%20Contact" target="_top" id="mailer" class="contact button">Contact Us</a>
+      </div>
     </section>
   </div>
   <p class='centered' style='background-color:whiteSmoke;'>Copyright &copy; 2014 deYrd LLC. All Rights Reserved</p>
@@ -51,6 +49,17 @@
 <script type="text/javascript" src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
 <script type="text/javascript">
   $(document).ready(function() {
+    $('#mailer').on('click', function() {
+      var mailerRaw = $('#mailer').attr('href');
+      var mailerNew = mailerRaw.replace(/3/g,"").replace(/4/g,"");
+      $('#mailer').attr('href', mailerNew);
+    });
+    $('#signupBtn').on('click', function() {
+      var signUpRaw = $('#signupBtn').attr('href');
+      var signUpNew = signUpRaw.replace(/3/g,"").replace(/4/g,"");
+      var visitorEmail = $('#visitorEmail').val();
+      $('#signupBtn').attr('href', signUpNew + visitorEmail);
+    });
     $('.navigation li').on('click', function() {
       var elem = $(this),
           anchor = elem.data('anchor');
